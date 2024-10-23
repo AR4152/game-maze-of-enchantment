@@ -4,7 +4,7 @@
 
 1. [Project Summary](#project-summary-) 📝
 2. [Description of the Game](#description-of-the-game-) 🎮
-   - [Level 0: The Knight's Realm](#level-0-the-knights-realm-) 🛡️
+   - [Level 0: The Knight's Realm](#level-0-the-knights-realm-%EF%B8%8F) 🛡️
    - [Level 1: The Titan's Fortress](#level-1-the-titans-fortress-) 🗿
    - [Level 2: The Dragon's Lair](#level-2-the-dragons-lair-) 🐉
 3. [List of Features](#list-of-features-) ⚔️
