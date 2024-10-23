@@ -1,0 +1,81 @@
+image: maven:3.8.3-openjdk-17
+
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+
+stages:
+    - build
+    - test
+    - deploy
+    - visualize
+
+# Build
+build:
+  stage: build
+  script:
+    - mvn $MAVEN_CLI_OPTS compile
+  tags:
+    - comp2120
+
+# Test
+test:
+  stage: test
+  script:
+    - mvn $MAVEN_CLI_OPTS clean org.jacoco:jacoco-maven-plugin:prepare-agent test jacoco:report
+    - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, "instructions covered"; print 100*covered/instructions, "% covered" }' target/site/jacoco/jacoco.csv
+    - cat target/site/jacoco/index.html | grep -o 'Total[^%]*%'
+  coverage: '/Total.*?([0-9]{1,3})%/'
+  artifacts:
+    when: always
+    paths:
+      - target/site/jacoco/
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+  tags:
+    - comp2120
+
+# Set up page to view code coverage
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mkdir public
+    - mv target/site/jacoco/index.html public
+  artifacts:
+    paths:
+      - public
+  tags:
+    - comp2120
+
+generate-jar:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mvn install
+    - mv target/comp-2120-assignment-3-workshop-09-group-c-1.0-SNAPSHOT.jar items/game.jar
+  artifacts:
+    paths:
+      - target/
+  tags:
+    - comp2120
+
+# Visualise code coverage line by line
+visualize:
+  stage: visualize
+  image: registry.gitlab.com/haynes/jacoco2cobertura:1.0.7
+  script:
+    # convert report from jacoco to cobertura, using relative project path
+    - python /opt/cover2cover.py target/site/jacoco/jacoco.xml $CI_PROJECT_DIR/src/main/java/ > target/site/cobertura.xml
+  artifacts:
+    paths:
+      - target/site/cobertura/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: target/site/cobertura.xml
+  tags:
+    - comp2120
