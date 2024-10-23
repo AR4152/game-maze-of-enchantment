@@ -12,7 +12,7 @@
    - [Run Jar File (Recommended)](#run-jar-file-recommended-) 🚀
    - [Clone our Repository](#clone-our-repository) 🛠️
    - [Using Docker](#using-docker) 🐳
-5. [Resources & Collaborators](#resources--collaborators) 📚
+5. [Resources & Collaborators](#resources--collaborators-) 📚
 
 ---
 
