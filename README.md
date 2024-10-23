@@ -7,12 +7,12 @@
    - [Level 0: The Knight's Realm](#level-0-the-knights-realm-%EF%B8%8F) 🛡️
    - [Level 1: The Titan's Fortress](#level-1-the-titans-fortress-) 🗿
    - [Level 2: The Dragon's Lair](#level-2-the-dragons-lair-) 🐉
-3. [List of Features](#list-of-features-) ⚔️
-4. [Installation and Setup](#installation-and-setup) 💻
+3. [List of Features](#list-of-features-%EF%B8%8F) ⚔️
+4. [Installation and Setup](#installation-and-setup-) 💻
    - [Run Jar File (Recommended)](#run-jar-file-recommended-) 🚀
    - [Clone our Repository](#clone-our-repository) 🛠️
    - [Using Docker](#using-docker) 🐳
-5. [Resources & Collaborators](#resources--collaborators-) 📚
+5. [Resources & Collaborators](#resources--collaborators) 📚
 
 ---
 
@@ -94,7 +94,7 @@ Ensure that your system has [JDK-17](https://www.oracle.com/java/technologies/ja
     docker run -it ar4152/comp-2120-assignment-3-workshop-09-group-c:latest
     ```
 
-## Resources & Collaborators
+## Resources & Collaborators 📚
 
 For more detailed information about the game's development, design decisions, and technical documentation, please refer to the following resources in the repository:
 
