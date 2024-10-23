@@ -2,17 +2,17 @@
 
 ## Table of Contents
 
-1. [Project Summary](#project-summary) 📝
-2. [Description of the Game](#description-of-the-game) 🎮
-   - [Level 0: The Knight's Realm](#level-0-the-knights-realm) 🛡️
-   - [Level 1: The Titan's Fortress](#level-1-the-titans-fortress) 🗿
-   - [Level 2: The Dragon's Lair](#level-2-the-dragons-lair) 🐉
-3. [List of Features](#list-of-features) ⚔️
+1. [Project Summary](#project-summary-) 📝
+2. [Description of the Game](#description-of-the-game-) 🎮
+   - [Level 0: The Knight's Realm](#level-0-the-knights-realm-) 🛡️
+   - [Level 1: The Titan's Fortress](#level-1-the-titans-fortress-) 🗿
+   - [Level 2: The Dragon's Lair](#level-2-the-dragons-lair-) 🐉
+3. [List of Features](#list-of-features-) ⚔️
 4. [Installation and Setup](#installation-and-setup) 💻
-   - [Run Jar File (Recommended)](#run-jar-file-recommended) 🚀
+   - [Run Jar File (Recommended)](#run-jar-file-recommended-) 🚀
    - [Clone our Repository](#clone-our-repository) 🛠️
    - [Using Docker](#using-docker) 🐳
-5. [Resources & Collaborators](#resources--collaborators) 📚
+5. [Resources & Collaborators](#resources--collaborators-) 📚
 
 ---
 
