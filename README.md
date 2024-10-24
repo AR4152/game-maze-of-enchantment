@@ -19,7 +19,7 @@
 ## Project Summary 📝
 
 **Project Name**: Maze of Enchantment  
-**Project Goal**: Create a maze game where players navigate through mazes, encounter enemies, collect items, and progress through various levels.
+**Project Goal**: Create a game where players navigate through mazes, encounter enemies, collect items, and progress through various levels.
 
 ## Description of the Game 🎮
 
